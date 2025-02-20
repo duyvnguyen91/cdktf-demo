@@ -1,10 +1,21 @@
 {
   "language": "python",
   "app": "pipenv run python main.py",
-  "projectId": "c2e0f0d9-fdbd-4046-b251-42dd711861d9",
+  "projectId": "e8f54f3a-43d5-4f15-94bd-cb28f43a2007",
   "sendCrashReports": "true",
   "terraformProviders": [],
-  "terraformModules": [],
+  "terraformModules": [
+    {
+      "name": "vpc",
+      "source": "terraform-aws-modules/vpc/aws",
+      "version": "5.19.0"
+    },
+    {
+      "name": "eks",
+      "source": "terraform-aws-modules/eks/aws",
+      "version": "20.33.1"
+    }
+  ],
   "codeMakerOutput": "imports",
   "context": {
 
