@@ -3,7 +3,13 @@
   "app": "pipenv run python main.py",
   "projectId": "e8f54f3a-43d5-4f15-94bd-cb28f43a2007",
   "sendCrashReports": "true",
-  "terraformProviders": [],
+  "terraformProviders": [
+    {
+      "name": "aws",
+      "source": "hashicorp/aws",
+      "version": "~> 5.0"
+    }
+  ],
   "terraformModules": [
     {
       "name": "vpc",
