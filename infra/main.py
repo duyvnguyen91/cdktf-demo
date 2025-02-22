@@ -19,8 +19,9 @@ class InfraStack(Construct):
                 "privateSubnets": ["10.0.3.0/24", "10.0.4.0/24"],
                 "singleNatGateway": True
             }
-            
         )
+        
+        
 
 app = App()
 InfraStack(app, "cdktf-demo")
