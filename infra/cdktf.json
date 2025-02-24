@@ -8,6 +8,21 @@
       "name": "aws",
       "source": "hashicorp/aws",
       "version": "~> 5.0"
+    },
+    {
+      "name": "helm",
+      "source": "hashicorp/helm",
+      "version": "~> 2.14.0"
+    },
+    {
+      "name": "kubernetes",
+      "source": "hashicorp/kubernetes",
+      "version": "~> 2.35.1"
+    },
+    {
+      "name": "kubectl",
+      "source": "gavinbunney/kubectl",
+      "version": "~> 1.19.0"
     }
   ],
   "terraformModules": [
@@ -20,6 +35,21 @@
       "name": "eks",
       "source": "terraform-aws-modules/eks/aws",
       "version": "20.33.1"
+    },
+    {
+      "name": "eksClusterAutoscaler",
+      "source": "lablabs/eks-cluster-autoscaler/aws",
+      "version": "2.2.0"
+    },
+    {
+      "name": "eksLoadBalancerController",
+      "source": "lablabs/eks-load-balancer-controller/aws",
+      "version": "2.1.0"
+    },
+    {
+      "name": "irsaEks",
+      "source": "terraform-aws-modules/iam/aws//modules/iam-role-for-service-accounts-eks",
+      "version": "5.52.2"
     }
   ],
   "codeMakerOutput": "imports",

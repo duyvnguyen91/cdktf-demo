@@ -11,5 +11,6 @@ cdktf-cdktf-provider-aws = "*"
 cdktf = "*"
 constructs = "*"
 jsii = "*"
+cdkft = "*"
 
 [dev-packages]
