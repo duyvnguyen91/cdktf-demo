@@ -2,7 +2,7 @@ from constructs import Construct
 from cdktf import App, TerraformStack, TerraformOutput, Token
 from eks import EksStack, EksConfig
 from network import NetworkStack, VpcConfig
-
+from rds import RdsStack
 class InfraStack(Construct):
     def __init__(self, scope: Construct, id: str):
         super().__init__(scope, id)
@@ -34,7 +34,15 @@ class InfraStack(Construct):
             )
         )
         eks.add_dependency(vpc)
-        
+
+        rds = RdsStack(
+            self,
+            "demo-rds",
+            vpc_id=vpc.vpc.vpc_id_output,
+            subnet_ids=Token.as_list(vpc.vpc.private_subnets_output)
+        )
+        rds.add_dependency(vpc)
+
 app = App()
 InfraStack(app, "cdktf-demo")
 app.synth()
