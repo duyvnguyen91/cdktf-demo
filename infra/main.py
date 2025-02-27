@@ -3,6 +3,8 @@ from cdktf import App, TerraformStack, TerraformOutput, Token
 from eks import EksStack, EksConfig
 from network import NetworkStack, VpcConfig
 from rds import RdsStack
+from k8s import K8sStack
+
 class InfraStack(Construct):
     def __init__(self, scope: Construct, id: str):
         super().__init__(scope, id)
@@ -42,6 +44,12 @@ class InfraStack(Construct):
             subnet_ids=Token.as_list(vpc.vpc.private_subnets_output)
         )
         rds.add_dependency(vpc)
+        
+        nginx = K8sStack(
+            self,
+            "demo-k8s"
+        )
+        nginx.add_dependency(eks)
 
 app = App()
 InfraStack(app, "cdktf-demo")
