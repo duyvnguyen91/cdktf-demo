@@ -1,9 +1,9 @@
 from constructs import Construct
 from cdktf import App, TerraformStack, TerraformOutput, Token
-from eks import EksStack, EksConfig
-from network import NetworkStack, VpcConfig
-from rds import RdsStack
-from k8s import K8sStack
+from stacks.eks import EksStack, EksConfig
+from stacks.network import NetworkStack, VpcConfig
+from stacks.rds import RdsStack
+from stacks.k8s import K8sStack
 
 class InfraStack(Construct):
     def __init__(self, scope: Construct, id: str):
