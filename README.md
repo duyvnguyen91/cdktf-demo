@@ -32,7 +32,7 @@ Install Pipenv
 Install Dependency Library
 
 ```
-~$ pipenv install
+~$ cd infra && pipenv install
 ```
 
 Ignore JSII node version check
@@ -66,5 +66,7 @@ cdktf deploy <stack name>
 
 ## References
 https://www.youtube.com/watch?v=imTXP0Op5X0
+
 https://developer.hashicorp.com/terraform/cdktf/concepts/cdktf-architecture
+
 https://developer.hashicorp.com/terraform/tutorials/cdktf/cdktf-install
