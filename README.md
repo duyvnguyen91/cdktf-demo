@@ -38,7 +38,7 @@ Install Dependency Library
 Ignore JSII node version check
 
 ```
-~$ export JSII_DISABLE_NODE_VERSION_CHECK=1
+~$ export JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION=1
 ```
 
 ## Get Started
